@@ -4,7 +4,7 @@
     <!-- Logo de marca -->
     <a href="{{ url('/') }}" class="brand-logo">
       <i class="bi bi-scissors brand-icon"></i>
-      <span>IMPERIUM <small style="font-size: 0.75rem; letter-spacing: 0.2em; font-weight: 500; opacity: 0.85;">BARBERSHOP</small></span>
+      <span>AVELOS </span>
     </a>
 
     <!-- Botón Hamburguesa para celulares -->
