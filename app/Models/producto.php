@@ -10,6 +10,9 @@ class producto extends Model
         'nombre',
         'descripcion',
         'precio',
+        'imagen',
+        'categoria',
         'activo',
+        'vistaprincipal',
     ];
 }
