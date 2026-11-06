@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productors', function (Blueprint $table) {
+        Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('descripcion');
@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('imagen');
             $table->string('categoria');
             $table->boolean('activo')->default(true);
+            $table->string('vistaprincipal')->nullable();
             $table->timestamps();
         });
     }
