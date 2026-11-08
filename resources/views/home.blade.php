@@ -24,7 +24,7 @@
                     </p>
 
                     <div class="d-flex justify-content-center gap-3 mb-5">
-                        <a href="#" class="btn btn-lime rounded-pill px-4 py-2 btn-lg">Ordenar ahora</a>
+                        <a href="/pedidos" class="btn btn-lime rounded-pill px-4 py-2 btn-lg">Ordenar ahora</a>
                     </div>
 
                     <div class="row pt-4 border-top g-4">
@@ -72,7 +72,7 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-baseline mb-2">
                                 <h3 class="dish-title h6 fw-semibold mb-0 pe-2">{{ $producto->nombre }}</h3>
-                                <span class="dish-price fw-bold text-nowrap">{{ $producto->precio }} mxn</span>
+                                <span class="dish-price fw-bold text-nowrap">{{number_format($producto->precio, 2) }} mxn</span>
                             </div>
                             <p class="text-muted small mb-0">
                                 {{ $producto->descripcion }}
