@@ -1,5 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\homecontroller;
+use App\Http\Controllers\pedidocontroller;
 
-Route::get('/', [App\Http\Controllers\homecontroller::class, 'index'])->name('home');
+//Ruta Vistas Generales
+Route::get('/', [homecontroller::class, 'index'])->name('home');
+Route::get('/pedidos', [pedidocontroller::class, 'index'])->name('pedidos');
