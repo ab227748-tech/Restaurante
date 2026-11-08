@@ -15,4 +15,10 @@ class producto extends Model
         'activo',
         'vistaprincipal',
     ];
+
+    public function categoria()
+    {
+        return $this->belongsTo(categoria::class, 'categoriaid');
+    }
+
 }
