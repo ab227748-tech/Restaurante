@@ -16,10 +16,19 @@ class Producto extends Seeder
             'nombre' => 'Hamburguesa BBQ',
             'descripcion' => 'Hamburguesa con salsa BBQ y vegetales frescos.',
             'precio' => 80.00,
-            'imagen' => 'hamburguesa_bbq.png',
-            'categoria' => 'Hamburguesas',
+            'imagen' => 'hamburguesabbq.png',
+            'categoriaid' => 1,
             'activo' => true,
             'vistaprincipal' => 'si',
+        ]);
+        ProductoModel::create([
+            'nombre' => 'Hamburguesa Clásica',
+            'descripcion' => 'Hamburguesa con carne de res y vegetales frescos.',
+            'precio' => 50.00,
+            'imagen' => 'hamburguesaclasica.png',
+            'categoriaid' => 1,
+            'activo' => true,
+            'vistaprincipal' => 'no',
         ]);
     }
 }
