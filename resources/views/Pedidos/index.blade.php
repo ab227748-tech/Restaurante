@@ -36,7 +36,8 @@
                                 data-product-description="{{ $item->descripcion }}"
                                 data-product-price="{{ $item->precio }}">
                                 <div class="dish-media position-relative rounded-4 overflow-hidden mb-3">
-                                    <span class="badge-local position-absolute">{{ $item->categoria->nombrecategoria }}</span>
+                                    <span
+                                        class="badge-local position-absolute">{{ $item->categoria->nombrecategoria }}</span>
                                     <img src="/imagenes/{{ $item->imagen }}" alt="{{ $item->nombre }}"
                                         class="img-fluid w-100 object-fit-cover">
                                 </div>
@@ -91,6 +92,12 @@
                         <textarea id="review" name="review" rows="4" cols="50" placeholder="Escriba algo extra a su pedido"></textarea>
                     </div>
 
+                    <!--Marcador para saber si lo viene a buscar o se le llevara-->
+                    <div class="d-flex justify-content-between mb-4">
+                        <input type= "radio" name="tipo" value="1" checked> <label for="">Para pasar a buscar</label>
+                        <input type= "radio" name="tipo" value="2" data-bs-toggle="modal" data-bs-target="#exampleModal"> <label for="">Para llevar</label>
+                    </div>
+
                     <!-- Total Final -->
                     <div class="d-flex justify-content-between align-items-baseline mb-4">
                         <span class="fw-bold fs-6">Total</span>
@@ -104,6 +111,37 @@
                     </button>
                 </div>
             </aside>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Rellene sus datos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección">
+                        </div>
+                        <div class="mb-3">
+                            <label for="referencia" class="form-label">Referencia de la casa</label>
+                            <textarea class="form-control" id="referencia" rows="3"
+                                placeholder="Ingrese una referencia de su casa para poder ubircarlo"></textarea>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar direccion</button>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
