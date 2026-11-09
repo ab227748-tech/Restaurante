@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/home.css',
                 'resources/js/app.js',
                 'resources/js/pedidos.js',
+                'resources/js/login.js',
             ],
             refresh: true,
             fonts: [
