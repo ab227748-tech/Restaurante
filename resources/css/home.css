@@ -4,6 +4,7 @@
 :root {
   --bg-cream: #fbfaf5;
   --panel-bg: #f5f4ed;
+  --panel-highlight: #e3ece4;
   --text-dark: #1b261b;
   --text-muted-custom: #717b70;
   --accent-lime: #dcff50;
@@ -13,6 +14,7 @@
   --card-badge-bg: rgba(245, 244, 237, 0.95);
   --eco-card-bg: #edf1e8;
   --eco-green: #2d5a3c;
+  --dark-forest: #06281e;
 }
 
 body.site-body {
@@ -35,6 +37,11 @@ body.site-body {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   font-weight: 600;
+  color: var(--text-muted-custom);
+}
+
+.season-label {
+  font-size: 0.78rem;
   color: var(--text-muted-custom);
 }
 
@@ -71,7 +78,7 @@ body.site-body {
 }
 
 /* ==========================================================================
-   INSIGNIAS (BADGES) Y TAGS
+   INSIGNIAS (BADGES), DOTS Y TAGS
    ========================================================================== */
 .badge-custom {
   display: inline-flex;
@@ -92,6 +99,23 @@ body.site-body {
   height: 6px;
   border-radius: 50%;
   background-color: #2b593f;
+}
+
+.dot-lime {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #c8f53b;
+  display: inline-block;
+}
+
+.status-dot-lime {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-lime);
+  border: 1.5px solid #2b4928;
+  display: inline-block;
 }
 
 .badge-local,
@@ -125,6 +149,7 @@ body.site-body {
 .btn-lime:focus {
   background-color: var(--accent-lime-hover);
   color: #1a2211;
+  transform: translateY(-1px);
 }
 
 .btn-outline-dark-custom {
@@ -398,4 +423,70 @@ body.site-body {
 .payment-notes {
   font-size: 0.72rem;
   color: var(--text-muted-custom);
+}
+
+/* ==========================================================================
+   TARJETAS KPI / ESTADÍSTICAS (GESTIÓN DEL MENÚ)
+   ========================================================================== */
+.kpi-card {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-soft);
+  min-height: 185px;
+  transition: transform 0.2s ease;
+}
+
+.kpi-card-highlight {
+  background-color: var(--panel-highlight);
+  border-color: #d6e3d8;
+}
+
+.kpi-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted-custom);
+}
+
+/* Círculos de Iconos */
+.kpi-icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.icon-soft-green {
+  background-color: #d8e2dc;
+  color: #1e3a2f;
+}
+
+.icon-dark-green {
+  background-color: var(--dark-forest);
+  color: #ffffff;
+}
+
+.icon-light {
+  background-color: #ecece4;
+  color: var(--text-dark);
+}
+
+/* Valores Numéricos */
+.kpi-value {
+  font-size: clamp(2.1rem, 3vw, 2.55rem);
+  line-height: 1.1;
+  color: var(--text-dark);
+}
+
+.kpi-decimals {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.kpi-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted-custom) !important;
 }
