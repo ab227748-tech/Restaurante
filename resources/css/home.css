@@ -24,10 +24,13 @@ body.site-body {
   letter-spacing: -0.01em;
 }
 
-/* Tipografía Editorial */
 .font-serif {
   font-family: 'Newsreader', serif;
   font-weight: 400;
+}
+
+.border-bottom-soft {
+  border-bottom: 1px solid var(--border-soft);
 }
 
 /* ==========================================================================
@@ -60,7 +63,8 @@ body.site-body {
 
 .section-title {
   font-size: clamp(2rem, 3.2vw, 2.7rem);
-  line-height: 1.15;
+  line-height: 1.12;
+  color: var(--text-dark);
 }
 
 .hero-desc {
@@ -102,11 +106,12 @@ body.site-body {
 }
 
 .dot-lime {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #c8f53b;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .status-dot-lime {
@@ -116,6 +121,7 @@ body.site-body {
   background-color: var(--accent-lime);
   border: 1.5px solid #2b4928;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .badge-local,
@@ -183,11 +189,10 @@ body.site-body {
 }
 
 .btn-filter.active {
-  background-color: #0b1f16;
-  color: #ffffff;
+  background-color: var(--dark-forest) !important;
+  color: #ffffff !important;
 }
 
-/* Control de Cantidad (- 1 +) */
 .quantity-control {
   border: 1px solid var(--border-soft);
   background-color: transparent;
@@ -213,7 +218,6 @@ body.site-body {
   color: var(--text-dark);
 }
 
-/* Botón Añadir a la orden */
 .btn-add {
   background-color: var(--accent-lime);
   color: #1a2211;
@@ -346,7 +350,6 @@ body.site-body {
   text-decoration: underline !important;
 }
 
-/* Banner Ecológico */
 .eco-callout {
   background-color: var(--eco-card-bg);
   border: 1px solid rgba(45, 90, 60, 0.15);
@@ -369,7 +372,6 @@ body.site-body {
   color: #556653;
 }
 
-/* Propinas */
 .tip-label {
   font-size: 0.68rem;
   letter-spacing: 0.05em;
@@ -397,7 +399,6 @@ body.site-body {
   color: #ffffff;
 }
 
-/* Totales y Finalización */
 .cost-breakdown {
   border-color: var(--border-soft) !important;
 }
@@ -429,15 +430,16 @@ body.site-body {
    TARJETAS KPI / ESTADÍSTICAS (GESTIÓN DEL MENÚ)
    ========================================================================== */
 .kpi-card {
-  background-color: var(--panel-bg);
-  border: 1px solid var(--border-soft);
+  background-color: var(--panel-bg) !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 28px !important;
   min-height: 185px;
   transition: transform 0.2s ease;
 }
 
-.kpi-card-highlight {
-  background-color: var(--panel-highlight);
-  border-color: #d6e3d8;
+.kpi-card.kpi-card-highlight {
+  background-color: var(--panel-highlight) !important;
+  border-color: #d6e3d8 !important;
 }
 
 .kpi-label {
@@ -446,7 +448,6 @@ body.site-body {
   color: var(--text-muted-custom);
 }
 
-/* Círculos de Iconos */
 .kpi-icon-circle {
   width: 42px;
   height: 42px;
@@ -455,24 +456,24 @@ body.site-body {
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 .icon-soft-green {
-  background-color: #d8e2dc;
-  color: #1e3a2f;
+  background-color: #d8e2dc !important;
+  color: #1e3a2f !important;
 }
 
 .icon-dark-green {
-  background-color: var(--dark-forest);
-  color: #ffffff;
+  background-color: var(--dark-forest) !important;
+  color: #ffffff !important;
 }
 
 .icon-light {
-  background-color: #ecece4;
-  color: var(--text-dark);
+  background-color: #ecece4 !important;
+  color: #1b261b !important;
 }
 
-/* Valores Numéricos */
 .kpi-value {
   font-size: clamp(2.1rem, 3vw, 2.55rem);
   line-height: 1.1;
@@ -489,4 +490,150 @@ body.site-body {
 .kpi-sub {
   font-size: 0.82rem;
   color: var(--text-muted-custom) !important;
+}
+
+/* ==========================================================================
+   TABLA DE INVENTARIO DE PLATOS
+   ========================================================================== */
+.inventory-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+}
+
+.inventory-table {
+  margin-bottom: 0;
+}
+
+.inventory-table thead th {
+  background-color: var(--panel-bg) !important;
+  color: var(--text-muted-custom) !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.inventory-table tbody td {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f2f1eb;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.inventory-table tbody tr:last-child td {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+/* Imagen circular del plato y etiqueta COSECHA */
+.avatar-dish {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.avatar-dish img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+}
+
+.badge-cosecha {
+  position: absolute;
+  top: 4px;
+  left: -4px;
+  background-color: var(--accent-lime);
+  color: #121c0c;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 50rem;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.dish-subtitle {
+  max-width: 350px;
+}
+
+/* Píldoras de Disponibilidad */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  border-radius: 50rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-available {
+  background-color: #dce6dd;
+  color: #163626;
+}
+
+.status-available .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #0b2e1f;
+}
+
+.status-soldout {
+  background-color: #fce2e1;
+  color: #a12c28;
+}
+
+.status-soldout .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #b82c28;
+}
+
+/* Pie de Tabla y Paginación */
+.inventory-footer {
+  background-color: #fbfaf6;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  border: 1px solid var(--border-soft);
+  transition: all 0.2s ease;
+}
+
+.page-nav {
+  padding: 6px 16px;
+  border-radius: 50rem;
+}
+
+.page-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.page-btn:hover {
+  background-color: var(--panel-bg);
+  color: var(--text-dark);
+}
+
+.page-btn.active {
+  background-color: var(--dark-forest);
+  border-color: var(--dark-forest);
+  color: #ffffff;
 }
